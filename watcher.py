@@ -9,6 +9,8 @@ uname = ''
 passw = ''
 login_url = 'https://dys.mu.edu.tr/login/index_auth.php'
 
+chromedriver = '/Users/furkankykc/Downloads/chromedriver'
+chromeProfilePath = '/Users/furkankykc/Library/Application Support/Google/Chrome/'
 
 def kill_adobe():
     import psutil
@@ -39,9 +41,7 @@ def waitfor(t):
 
 '''defaults write com.google.Chrome ExternalProtocolDialogShowAlwaysOpenCheckbox -bool true'''
 
-chromedriver = '/Users/furkankykc/Downloads/chromedriver'
 chrome_options = webdriver.ChromeOptions()
-chromeProfilePath = '/Users/furkankykc/Library/Application Support/Google/Chrome/'
 chrome_options.add_argument("user-data-dir=" + chromeProfilePath)
 chrome_options.add_argument("profile-directory=Default")
 
